@@ -38,6 +38,7 @@
 - Date: 22/01/2022
 - Modified: 22/01/2022
 - Source: [disctopia-c2 v1.0.1](https://github.com/3ct0s/disctopia-c2/releases/tag/v1.0.1)
+- Implementation: Python 3.8.9
 
 ## Description
 
@@ -55,7 +56,7 @@
 | Process Creation   | reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v update /t REG_SZ /d "%appdata%\Windows-Explorer.exe" | [Persistence](#persistence)                             |
 | Process Creation   | attrib +h                                                                                                          | [createConfig](#createconfig)                             |
 | HTTP Request       | https://api.ipify.org                                                                                              | [Extract Discord Tokens](#extract-discord-tokens)<br />[getIP](#getip)                             |
-| User-Agent         | python-requests/X.XX.X                                                                                             | [#](#)                             |
+| User-Agent         | python-requests/(Version)                                                                                             | [#](#)                             |
 | User-Agent         | Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11           | [#](#)                             |
 | User-Agent         | DiscordBot (https://github.com/Rapptz/discord.py {0}) Python/{1[0]}.{1[1]} aiohttp/{2}                             | [#](#)                             |
 | Directory Creation | %userprofile%\.config                                                                                              | [#](#)                             |
@@ -75,7 +76,8 @@
 ### List Processes
 
 - Description: List the running processes on a system
-- Source Reference: https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L156
+- Source Reference:
+  - https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L156
 - Indicators:
   - Call `tasklist` binary with the `CREATE_NO_WINDOW` flag (0x08000000)
 
@@ -105,7 +107,8 @@
 ### Download Files
 
 - Description: Download files from the agent
-- Source Reference: https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L173
+- Source Reference:
+  - https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L173
 - Indicators:
   - Communication via the discord API using (discord.py) uses the following hardocded user-agent
 
@@ -117,10 +120,11 @@
 ### Upload Files
 
 - Description: Upload files to agent
-- Source Reference: https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L173
+- Source Reference:
+  - https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L173
 - Indicators:
   - Uplaoded files are stored in the `uploads` directory
-  - Files are requested using the requests library which contain the hardcoded user-agent `python-requests/X.XX.X`
+  - Files are requested using the requests library which contain the hardcoded user-agent `python-requests/(Version)`
 
   ```python
   try:
@@ -136,7 +140,8 @@
 ### Extract Discord Tokens
 
 - Description: Get the stored Discord Tokens from the agent
-- Source Reference: https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L210
+- Source Reference:
+  - https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L210
 - Indicators:
   - Make requests to discord URL's using the following user-agent: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11`
   
@@ -190,7 +195,8 @@
 ### Take Screenshots
 
 - Description: Take a screenshot of the agents screen
-- Source Reference: https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L221
+- Source Reference:
+  - https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L221
 - Indicators:
   - Save the screenshot to the following location: `%temp%\s.png`
 
@@ -210,7 +216,8 @@
 ### Keylogger
 
 - Description: Log keystrokes
-- Source Reference: https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L242
+- Source Reference:
+  - https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L242
 - Indicators:
   - Write files to the following location: `%temp%\report.txt`
 
@@ -237,7 +244,8 @@
 ### Steal Browser Credential
 
 - Description: Get the stored chrome credentials from the agent.
-- Source Reference: https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L264
+- Source Reference:
+  - https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L264
 - Indicators:
   - Copy the goolge chrome database and create the following file: `my_chrome_data.db`
 
@@ -266,7 +274,8 @@
 ### Persistence
 
 - Description: Enable persistence on the target agent
-- Source Reference: https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L286
+- Source Reference:
+  - https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L286
 - Indicators:
   - The agent will copy itself to the following location: `%appdata%\Windows-Explorer.exe`
   
@@ -288,7 +297,8 @@
 ### CMD
 
 - Description: Execute any command on the host via the agent
-- Source Reference: https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L302
+- Source Reference:
+  - https://github.com/3ct0s/disctopia-c2/blob/3d16886e2d852ac06081453ed57f2750a74a6166/code/main.py#L302
 - Indicators:
   - Write the results of the command if they exceed a length of `4000` to the following location: `%temp%\response.txt`
 
