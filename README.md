@@ -9,6 +9,7 @@ Note: most of the analysis provided here is based on code-review. If you find an
 Below is a list of the currently evaluated C2's
 
 - [Ares](https://github.com/sweetsoftware/Ares)
+- [slack-c2bot](https://github.com/praetorian-inc/slack-c2bot)
 - disctopia-c2
   - [v1.0.1](https://github.com/nasbench/C2-Matrix-Indicators/tree/main/disctopia-c2/1.0.1)
 
