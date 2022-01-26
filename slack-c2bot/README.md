@@ -36,11 +36,11 @@
 
 | Description        | Indicator                                                                                                          | Reference                          |
 |--------------------|--------------------------------------------------------------------------------------------------------------------|------------------------------------|
-| HTTP Post Request   | https[:]//slack.com/api/chat.postMessage                                                                                                          | [Post Message](#postmsg) |
-| HTTP Get Request   | https[:]//slack.com/api/channels.history                                                                                                          | [Get Channel History](#getchannelhistory) |
-| User-Agent   | Go-http-client/1.1                                                                                                          | [Get Channel History](#getchannelhistory)<br />[Post Message](#postmsg) |
-| Process Creation (Windows)   | cmd.exe /c                                                                                                          | [Execute Commands via SHELL](#execute-commands-via-shell) |
-| Process Creation (Linux)   | bash -c                                                                                                          | [Execute Commands via SHELL](#execute-commands-via-shell) |
+| HTTP Post Request   | ```https://slack.com/api/chat.postMessage``` | [Post Message](#postmsg) |
+| HTTP Get Request   | ```https://slack.com/api/channels.history``` | [Get Channel History](#getchannelhistory) |
+| User-Agent   | ```Go-http-client/1.1``` | [Get Channel History](#getchannelhistory)<br />[Post Message](#postmsg) |
+| Process Creation (Windows)   | ```cmd.exe /c [COMMAND]``` | [Execute Commands via SHELL](#execute-commands-via-shell) |
+| Process Creation (Linux)   | ```bash -c [COMMAND]```| [Execute Commands via SHELL](#execute-commands-via-shell) |
 
 ## Capabilities
 
