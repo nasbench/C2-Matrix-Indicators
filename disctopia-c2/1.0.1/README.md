@@ -52,24 +52,24 @@
 
 | Description        | Indicator                                                                                                          | Reference                          |
 |--------------------|--------------------------------------------------------------------------------------------------------------------|------------------------------------|
-| Process Creation   | tasklist                                                                                                           | [List Processes](#list-processes) |
-| Process Creation   | reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v update /t REG_SZ /d "%appdata%\Windows-Explorer.exe" | [Persistence](#persistence)                             |
-| Process Creation   | attrib +h                                                                                                          | [createConfig](#createconfig)                             |
-| HTTP Request       | https://api.ipify.org                                                                                              | [Extract Discord Tokens](#extract-discord-tokens)<br />[getIP](#getip)                             |
-| User-Agent         | python-requests/(Version)                                                                                             | [#](#)                             |
-| User-Agent         | Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11           | [#](#)                             |
-| User-Agent         | DiscordBot (https://github.com/Rapptz/discord.py {0}) Python/{1[0]}.{1[1]} aiohttp/{2}                             | [#](#)                             |
-| Directory Creation | %userprofile%\.config                                                                                              | [#](#)                             |
-| Directory Creation | %userprofile%\.config\uploads                                                                                      | [#](#)                             |
-| File Creation      | %userprofile%\.config\uploads\ID                                                                                   | [#](#)                             |
-| File Creation      | %appdata%\.cache~$                                                                                                 | [#](#)                             |
-| File Creation      | %temp%\s.png                                                                                                       | [#](#)                             |
-| File Creation      | %temp%\report.txt                                                                                                  | [#](#)                             |
-| File Creation      | my_chrome_data.db                                                                                                  | [#](#)                             |
-| File Creation      | %temp%\data.json                                                                                                   | [#](#)                             |
-| File Creation      | %appdata%\Windows-Explorer.exe                                                                                     | [#](#)                             |
-| File Creation      | %temp%\response.txt                                                                                                | [#](#)                             |
-| Registry Creation  | HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v update                                                       | [#](#)                             |
+| Process Creation   | ```tasklist``` | [List Processes](#list-processes) |
+| Process Creation   | ```reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v update /t REG_SZ /d "%appdata%\Windows-Explorer.exe"``` | [Persistence](#persistence) |
+| Process Creation   | ```attrib +h``` | [createConfig](#createconfig) |
+| HTTP Request       | ```https://api.ipify.org``` | [Extract Discord Tokens](#extract-discord-tokens)<br />[getIP](#getip) |
+| User-Agent         | ```python-requests/(Version)``` | [Upload Files](#upload-files)  |
+| User-Agent         | ```Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11``` | [Extract Discord Tokens](#extract-discord-tokens) |
+| User-Agent         | ```DiscordBot (https://github.com/Rapptz/discord.py {0}) Python/{1[0]}.{1[1]} aiohttp/{2}``` | [Download Files](#download-files) |
+| Directory Creation | ```%userprofile%\.config``` | [Create Config](#createconfig) |
+| Directory Creation | ```%userprofile%\.config\uploads``` | [Create Uploads](#createuploads) |
+| File Creation      | ```%userprofile%\.config\uploads\ID``` | [Create ID File](#create-id-file) |
+| File Creation      | ```%appdata%\.cache~$``` | [Extract Discord Tokens](#extract-discord-tokens) |
+| File Creation      | ```%temp%\s.png``` | [Take Screenshots](#take-screenshots) |
+| File Creation      | ```%temp%\report.txt``` | [Keylogger](#keylogger)<br />[Keylogs](#keylogs) |
+| File Creation      | ```my_chrome_data.db``` | [Steal Browser Credential](#steal-browser-credential) |
+| File Creation      | ```%temp%\data.json``` | [Steal Browser Credential](#steal-browser-credential) |
+| File Creation      | ```%appdata%\Windows-Explorer.exe``` | [Persistence](#persistence) |
+| File Creation      | ```%temp%\response.txt``` | [List Processes](#list-processes)<br />[CMD](#cmd) |
+| Registry Creation  | ```HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v update``` | [Persistence](#persistence) |
 
 ## Capabilities
 
