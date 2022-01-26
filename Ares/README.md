@@ -42,24 +42,25 @@
 
 | Description        | Indicator                                                                                                          | Reference                          |
 |--------------------|--------------------------------------------------------------------------------------------------------------------|------------------------------------|
-| HTTP Post Request   | http(s)[:]//[SERVER_IP]/api/USERNAME_[UUID]/upload                                                                                                          | [Upload Files](#upload-files) |
-| HTTP Post Request   | http(s)[:]//[SERVER_IP]/api/USERNAME_[UUID]/hello                                                                                                          | [Server Hello](#serverhello) |
-| HTTP Post Request   | http(s)[:]//[SERVER_IP]/api/USERNAME_[UUID]/report                                                                                                          | [Send Output](#send_output) |
-| User-Agent   | python-requests/(Version)                                                                                                          | [Upload Files](#upload-files)<br />[Server Hello](#serverhello)<br />[Send Output](#send_output) |
-| File Creation (Windows)   | %temp%\[RandomFileName].png                                                                                                          | [Screenshot](#screenshot) |
-| File Creation (Linux)   | /tmp/[RandomFileName].png                                                                                                          | [Screenshot](#screenshot) |
-| File Creation (Windows)   | %USERPROFILE%\ares\[AgentName]                                                                                                          | [Persiste](#persiste) |
-| File Creation (Linux)   | ~\.ares\[AgentName]                                                                                                          | [Persiste](#persiste) |
-| File Creation (Linux)   | ~/.config/autostart/ares.desktop                                                                                                           | [Persiste](#persiste) |
-| File Creation (Windows)   | %USERPROFILE%\ares\failed_connections                                                                                                           | [Update Consecutive Failed Connections](#update_consecutive_failed_connections) |
-| File Creation (Linux)   | ~/.ares/failed_connections                                                                                                           | [Update Consecutive Failed Connections](#update_consecutive_failed_connections) |
-| Directory Creation (Windows)   | %USERPROFILE%\ares                                                                                                          | [Persiste](#persiste) |
-| Directory Creation (Linux)   | ~\.ares                                                                                                          | [Persiste](#persiste) |
-| Process Creation (Windows)   | reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /f /v ares /t REG_SZ /d %USERPROFILE%\ares\[AgentName]                                                                                                           | [Persiste](#persiste) |
-| Process Creation (Windows)   | reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\Run /f /v ares                                                                                                           | [Persiste](#persiste) |
-| Process Creation (Windows)   | reg add HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce /f /v ares /t REG_SZ /d "cmd.exe /c del /s /q %USERPROFILE%\ares & rmdir %USERPROFILE%\ares"                                                                                                           | [Persiste](#persiste) |
-| Process Creation (Linux)   | chmod +x                                                                                                           | [Persiste](#persiste) |
-| Process Creation (Linux)   | grep -v .ares .bashrc > .bashrc.tmp;mv .bashrc.tmp .bashrc                                                                                                           | [Persiste](#persiste) |
+| HTTP Post Request   | ```http(s)://[SERVER_IP]/api/USERNAME_[UUID]/upload``` | [Upload Files](#upload-files) |
+| HTTP Post Request   | ```http(s)://[SERVER_IP]/api/USERNAME_[UUID]/hello``` | [Server Hello](#serverhello) |
+| HTTP Post Request   | ```http(s)://[SERVER_IP]/api/USERNAME_[UUID]/report``` | [Send Output](#send_output) |
+| User-Agent   | ```python-requests/(Version)``` | [Upload Files](#upload-files)<br />[Server Hello](#serverhello)<br />[Send Output](#send_output) |
+| File Creation (Windows)   | ```%temp%\[RandomFileName].png``` | [Screenshot](#screenshot) |
+| File Creation (Linux)   | ```/tmp/[RandomFileName].png``` | [Screenshot](#screenshot) |
+| File Creation (Windows)   | ```%USERPROFILE%\ares\[AgentName]``` | [Persiste](#persiste) |
+| File Creation (Linux)   | ```~\.ares\[AgentName]``` | [Persiste](#persiste) |
+| File Creation (Linux)   | ```~/.config/autostart/ares.desktop``` | [Persiste](#persiste) |
+| File Creation (Windows)   | ```%USERPROFILE%\ares\failed_connections``` | [Update Consecutive Failed Connections](#update_consecutive_failed_connections) |
+| File Creation (Linux)   | ```~/.ares/failed_connections``` | [Update Consecutive Failed Connections](#update_consecutive_failed_connections) |
+| Directory Creation (Windows)   | ```%USERPROFILE%\ares``` | [Persiste](#persiste) |
+| Directory Creation (Linux)   | ```~\.ares``` | [Persiste](#persiste) |
+| Process Creation (Windows)   | ```reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /f /v ares /t REG_SZ /d %USERPROFILE%\ares\[AgentName]``` | [Persiste](#persiste) |
+| Process Creation (Windows)   | ```reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\Run /f /v ares``` | [Persiste](#persiste) |
+| Process Creation (Windows)   | ```reg add HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce /f /v ares /t REG_SZ /d "cmd.exe /c del /s /q %USERPROFILE%\ares & rmdir %USERPROFILE%\ares"``` | [Persiste](#persiste) |
+| Process Creation (Linux)   | ```chmod +x``` | [Persiste](#persiste) |
+| Process Creation (Linux)   | ```grep -v .ares .bashrc > .bashrc.tmp``` | [Persiste](#persiste) |
+| Process Creation (Linux)   | ```mv .bashrc.tmp .bashrc``` | [Persiste](#persiste) |
 
 ## Capabilities
 
