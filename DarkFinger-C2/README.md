@@ -62,7 +62,7 @@
 |  Process Creation  | ```cmd.exe /c netsh interface portproxy add v4tov4 listenaddress=%LOCAL_IP% listenport=%DARK_PORT% connectaddress=%LOCAL_IP% connectport=%LOCAL_FINGER_PORT%``` | [Add Netsh PortProxy](#addnetshportproxy) |
 |  Process Creation  | ```cmd.exe /c netsh interface portproxy add v4tov4 listenaddress=%LOCAL_IP% listenport=%LOCAL_FINGER_PORT% connectaddress=%DARK_IP% connectport=%DARK_PORT%``` | [Add Netsh PortProxy](#addnetshportproxy) |
 |  Process Creation  | ```cmd.exe /c netsh interface portproxy add v4tov4 listenaddress=%LOCAL_IP% listenport=%DARK_PORT% connectaddress=%LOCAL_IP% connectport=%LOCAL_FINGER_PORT%``` | [Add Netsh PortProxy](#addnetshportproxy) |
-|  Process Creation  | ```cmd.exe /c ipconfig|find "IPv4"``` | |
+|  Process Creation  | ```cmd.exe /c ipconfig\|find "IPv4"``` | |
 |  Process Creation  | ```certutil -decode C:\Users\%username%\Desktop\%Tool%.txt C:\Users\%username%\Desktop\%Tool%.EXE``` | [Base64 EXE](#b64exe) |
 |  Process Creation  | ```cmd.exe /c del C:\Users\%username%\Desktop\%Tool%.txt``` | [Base64 EXE](#b64exe) |
 |  File Creation  | ```C:\Users\%username%\Desktop\tmp.txt``` | |

@@ -47,7 +47,7 @@
 | Process Creation   | ```sed 's/amp;//g'``` | [Get URLs](#geturls) |
 | Process Creation   | ```rm /tmp/input /tmp/output``` | [Named PIPE](#namedpipe) |
 | Process Creation   | ```mkfifo /tmp/input``` | [Named PIPE](#namedpipe) |
-| Process Creation   | ```tail -f /tmp/input | /bin/bash 2>&1 > /tmp/output``` | [Named PIPE](#namedpipe) |
+| Process Creation   | ```tail -f /tmp/input \| /bin/bash 2>&1 > /tmp/output``` | [Named PIPE](#namedpipe) |
 | File Creation   | ```/tmp/input``` | [Named PIPE](#namedpipe) |
 | File Creation   | ```/tmp/output``` | [Named PIPE](#namedpipe) |
 
